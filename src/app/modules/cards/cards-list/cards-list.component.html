@@ -1,0 +1,20 @@
+<button *ngIf="light" mat-icon-button color="primary" aria-label="Example icon button with a home icon"
+      [routerLink]="'add'">
+  <mat-icon>add</mat-icon>
+</button>
+<div *ngIf="cardList.length;else emptyCard">
+  <mat-selection-list #cards [multiple]="false">
+    <mat-list-option *ngFor="let card of cardList" [value]="card.id">
+      {{card.name}}
+    </mat-list-option>
+  </mat-selection-list>
+
+  <div *ngIf="light">
+    <app-card [cardId]="getSelectedCard(cards.selectedOptions.selected[0]?.value)"
+              (updateCard)="updateCard(cards.selectedOptions.selected[0]?.value)"
+              (deleteCard)="deleteCard(cards.selectedOptions.selected[0]?.value)"></app-card>
+  </div>
+</div>
+
+<ng-template #emptyCard><p>Sadge</p></ng-template>
+

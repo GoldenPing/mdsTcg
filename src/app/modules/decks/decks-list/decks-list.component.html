@@ -1,0 +1,14 @@
+<button mat-icon-button color="primary" aria-label="Example icon button with a home icon"
+      [routerLink]="'add'">
+  <mat-icon>add</mat-icon>
+</button>
+
+<div *ngIf="deckList?.length;else emptyCard">
+  <mat-selection-list  [multiple]="false">
+    <mat-list-option *ngFor="let deck of deckList">
+      {{deck.name}}
+    </mat-list-option>
+  </mat-selection-list>
+</div>
+
+<ng-template #emptyCard><p>Sadge</p></ng-template>

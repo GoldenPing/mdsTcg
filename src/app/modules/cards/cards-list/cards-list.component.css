@@ -1,0 +1,22 @@
+.example-small-box, .example-large-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1% 1%;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.example-large-box {
+  height: 100%;
+  width: 98%;
+}
+
+mat-list-option {
+  background-color: rgb(181, 133, 226);
+
+}
+
+mat-list-option:hover{
+  color: black;
+}

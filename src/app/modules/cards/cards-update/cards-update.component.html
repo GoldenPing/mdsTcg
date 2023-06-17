@@ -1,0 +1,16 @@
+<form [formGroup]="cardUpdateForm" (ngSubmit)="onSubmit()">
+
+  <mat-form-field appearance="fill">
+    <mat-label>Name Card</mat-label>
+    <input matInput name="name" formControlName="name">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Powa</mat-label>
+    <input matInput formControlName="value" type="number" name="value" >
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit" [disabled]="!cardUpdateForm.valid">
+    Valider
+  </button>
+
+</form>

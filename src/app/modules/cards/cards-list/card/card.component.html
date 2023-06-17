@@ -1,0 +1,17 @@
+
+<div *ngIf="cardId !== undefined" (onload)="getCard()">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{name}}</mat-card-title>
+      <mat-card-subtitle>{{stat}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+     </mat-card-content>
+    <mat-card-actions>
+      <button (click)="update()" mat-button>update</button>
+      <button (click)="delete()" mat-button>delete</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
